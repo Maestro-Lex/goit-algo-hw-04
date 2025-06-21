@@ -54,7 +54,7 @@ def data_sort(number: int) -> dict:
     Словник відсортованих даних різними методами для певної кількості даних
     '''
     result = {}
-    data = [random.randint(0, 1000) for _ in range(number)]
+    data = [random.randint(0, number) for _ in range(number)]
     result['Bubble sort'] = measure_time(data, bubble_sort)
     result['Insertion sort'] = measure_time(data, insertion_sort)
     result['Merge sort'] = measure_time(data, merge_sort)
